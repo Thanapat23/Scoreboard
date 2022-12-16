@@ -370,18 +370,20 @@ class _MyHomePageState extends State<MyHomePage>
                   ],
                 ),
                 const Text('QT/HALFTIME', style: TextStyle(fontSize: 20)),
-                Text(
-                  "$count",
-                  style: const TextStyle(fontSize: 40),
-                ),
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      foregroundColor: Colors.black,
-                      backgroundColor: Colors.blue[100],
-                      shape: const StadiumBorder(), // foreground
-                    ),
-                    onPressed: () => buttonSetMinus(2, 1),
-                    child: const Text("NEXT")),
+                // Text(
+                //   "$count",
+                //   style: const TextStyle(fontSize: 40),
+                // ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.blue[400],
+                  ),
+                  onPressed: () => buttonQT(1),
+                  child: Text(
+                    "$count",
+                    style: const TextStyle(fontSize: 50),
+                  ),
+                )
               ],
             )),
       ),
@@ -432,6 +434,12 @@ class _MyHomePageState extends State<MyHomePage>
       if (team == 2) {
         setB = (setB < decrement) ? 0 : setB - decrement;
       }
+    });
+  }
+
+  void buttonQT(int increment) {
+    setState(() {
+      count = (count + increment > 4) ? 0 : count + increment;
     });
   }
 }
