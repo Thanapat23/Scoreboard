@@ -98,22 +98,22 @@ class _MyHomePageState extends State<MyHomePage>
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.green[400], // foreground
+                                    backgroundColor: Colors.green[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonPlus(1, 1),
-                                  child: const Text("+1 คะแนน")),
+                                  child: const Text("+1")),
                               const SizedBox(
                                 width: 8,
                               ),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.red[400], // foreground
+                                    backgroundColor: Colors.red[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonMinus(1, 1),
-                                  child: const Text("-1 คะแนน"))
+                                  child: const Text("-1"))
                             ]),
                         Row(
                             //2 คะแนน
@@ -122,22 +122,22 @@ class _MyHomePageState extends State<MyHomePage>
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.green[400], // foreground
+                                    backgroundColor: Colors.green[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonPlus(1, 2),
-                                  child: const Text("+2 คะแนน")),
+                                  child: const Text("+2")),
                               const SizedBox(
                                 width: 8,
                               ),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.red[400], // foreground
+                                    backgroundColor: Colors.red[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonMinus(1, 2),
-                                  child: const Text("-2 คะแนน"))
+                                  child: const Text("-2"))
                             ]),
                         Row(
                             //3 คะแนน
@@ -146,22 +146,22 @@ class _MyHomePageState extends State<MyHomePage>
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.green[400], // foreground
+                                    backgroundColor: Colors.green[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonPlus(1, 3),
-                                  child: const Text("+3 คะแนน")),
+                                  child: const Text("+3")),
                               const SizedBox(
                                 width: 8,
                               ),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.red[400], // foreground
+                                    backgroundColor: Colors.red[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonMinus(1, 3),
-                                  child: const Text("-3 คะแนน")),
+                                  child: const Text("-3")),
                             ]),
                         const SizedBox(
                           height: 10,
@@ -176,22 +176,24 @@ class _MyHomePageState extends State<MyHomePage>
                                   ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         foregroundColor: Colors.white,
-                                        backgroundColor:
-                                            Colors.green[400], // foreground
+                                        backgroundColor: Colors.green[400],
+                                        shape:
+                                            const StadiumBorder(), // foreground
                                       ),
                                       onPressed: () => buttonSetPlus(1, 1),
-                                      child: const Text("+1 SET")),
+                                      child: const Text("+ SET")),
                                   const SizedBox(
                                     width: 10,
                                   ),
                                   ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         foregroundColor: Colors.white,
-                                        backgroundColor:
-                                            Colors.red[400], // foreground
+                                        backgroundColor: Colors.red[400],
+                                        shape:
+                                            const StadiumBorder(), // foreground
                                       ),
                                       onPressed: () => buttonSetMinus(1, 1),
-                                      child: const Text("-1 SET"))
+                                      child: const Text("- SET"))
                                 ]),
                             const SizedBox(
                               width: 8,
@@ -239,22 +241,22 @@ class _MyHomePageState extends State<MyHomePage>
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.green[400], // foreground
+                                    backgroundColor: Colors.green[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonPlus(2, 1),
-                                  child: const Text("+1 คะแนน")),
+                                  child: const Text("+1")),
                               const SizedBox(
                                 width: 8,
                               ),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.red[400], // foreground
+                                    backgroundColor: Colors.red[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonMinus(2, 1),
-                                  child: const Text("-1 คะแนน")),
+                                  child: const Text("-1")),
                             ]),
                         Row(
                             //2 คะแนน
@@ -263,22 +265,22 @@ class _MyHomePageState extends State<MyHomePage>
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.green[400], // foreground
+                                    backgroundColor: Colors.green[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonPlus(2, 2),
-                                  child: const Text("+2 คะแนน")),
+                                  child: const Text("+2")),
                               const SizedBox(
                                 width: 8,
                               ),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.red[400], // foreground
+                                    backgroundColor: Colors.red[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonMinus(2, 2),
-                                  child: const Text("-2 คะแนน")),
+                                  child: const Text("-2")),
                             ]),
                         Row(
                             //3 คะแนน
@@ -287,22 +289,22 @@ class _MyHomePageState extends State<MyHomePage>
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.green[400], // foreground
+                                    backgroundColor: Colors.green[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonPlus(2, 3),
-                                  child: const Text("+3 คะแนน")),
+                                  child: const Text("+3")),
                               const SizedBox(
                                 width: 8,
                               ),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     foregroundColor: Colors.white,
-                                    backgroundColor:
-                                        Colors.red[400], // foreground
+                                    backgroundColor: Colors.red[400],
+                                    shape: const StadiumBorder(), // foreground
                                   ),
                                   onPressed: () => buttonMinus(2, 3),
-                                  child: const Text("-3 คะแนน")),
+                                  child: const Text("-3")),
                             ]),
                         const SizedBox(
                           height: 10,
@@ -342,22 +344,24 @@ class _MyHomePageState extends State<MyHomePage>
                                   ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         foregroundColor: Colors.white,
-                                        backgroundColor:
-                                            Colors.green[400], // foreground
+                                        backgroundColor: Colors.green[400],
+                                        shape:
+                                            const StadiumBorder(), // foreground
                                       ),
                                       onPressed: () => buttonSetPlus(2, 1),
-                                      child: const Text("+1 SET")),
+                                      child: const Text("+ SET")),
                                   const SizedBox(
                                     width: 10,
                                   ),
                                   ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         foregroundColor: Colors.white,
-                                        backgroundColor:
-                                            Colors.red[400], // foreground
+                                        backgroundColor: Colors.red[400],
+                                        shape:
+                                            const StadiumBorder(), // foreground
                                       ),
                                       onPressed: () => buttonSetMinus(2, 1),
-                                      child: const Text("-1 SET"))
+                                      child: const Text("- SET"))
                                 ]),
                           ],
                         ),
@@ -370,6 +374,14 @@ class _MyHomePageState extends State<MyHomePage>
                   "$count",
                   style: const TextStyle(fontSize: 40),
                 ),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.black,
+                      backgroundColor: Colors.blue[100],
+                      shape: const StadiumBorder(), // foreground
+                    ),
+                    onPressed: () => buttonSetMinus(2, 1),
+                    child: const Text("NEXT")),
               ],
             )),
       ),
