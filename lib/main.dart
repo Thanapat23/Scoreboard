@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "ScoreBoard",
       home: const MyHomePage(),
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.brown),
     );
   }
