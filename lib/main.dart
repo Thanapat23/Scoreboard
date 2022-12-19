@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io' show Platform;
 
+import 'package:scoreboard/Components/team_score.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -191,6 +193,7 @@ class _MyHomePageState extends State<MyHomePage>
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
+                exampleSplitCode(context),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
