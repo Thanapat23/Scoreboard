@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +27,16 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
+  late AnimationController controller;
+  bool isPlaying = false;
+  String get countText {
+    Duration count = controller.duration! * controller.value;
+    return controller.isDismissed
+        ? '${controller.duration!.inHours}:${(controller.duration!.inMinutes % 60).toString().padLeft(2, '0')}:${(controller.duration!.inSeconds % 60).toString().padLeft(2, '0')}'
+        : '${count.inHours}:${(count.inMinutes % 60).toString().padLeft(2, '0')}:${(count.inSeconds % 60).toString().padLeft(2, '0')}';
+  }
+
+  double progress = 1.0;
   int scoreA = 0;
   int scoreB = 0;
   int setA = 0;
@@ -39,6 +50,23 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   void initState() {
     super.initState();
+    controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 60),
+    );
+
+    controller.addListener(() {
+      if (controller.isAnimating) {
+        setState(() {
+          progress = controller.value;
+        });
+      } else {
+        setState(() {
+          progress = 1.0;
+          isPlaying = false;
+        });
+      }
+    });
     image1 = Image.asset(
       "image/led0.png",
       width: 60,
@@ -383,7 +411,76 @@ class _MyHomePageState extends State<MyHomePage>
                     "$count",
                     style: const TextStyle(fontSize: 50),
                   ),
-                )
+                ),
+                const Text('TIME', style: TextStyle(fontSize: 20)),
+                GestureDetector(
+                  onTap: () {
+                    if (controller.isDismissed) {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) => SizedBox(
+                          height: 300,
+                          child: CupertinoTimerPicker(
+                            initialTimerDuration: controller.duration!,
+                            onTimerDurationChanged: (time) {
+                              setState(() {
+                                controller.duration = time;
+                              });
+                            },
+                          ),
+                        ),
+                      );
+                    }
+                  },
+                  child: AnimatedBuilder(
+                    animation: controller,
+                    builder: (context, child) => Text(
+                      countText,
+                      style: const TextStyle(
+                        fontSize: 60,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    GestureDetector(
+                      onTap: () {
+                        if (controller.isAnimating) {
+                          controller.stop();
+                          setState(() {
+                            isPlaying = false;
+                          });
+                        } else {
+                          controller.reverse(
+                              from: controller.value == 0
+                                  ? 1.0
+                                  : controller.value);
+                          setState(() {
+                            isPlaying = true;
+                          });
+                        }
+                      },
+                      child: Icon(
+                        isPlaying == true ? Icons.pause : Icons.play_arrow,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        controller.reset();
+                        setState(() {
+                          isPlaying = false;
+                        });
+                      },
+                      child: const Icon(
+                        Icons.stop,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             )),
       ),
@@ -441,5 +538,11 @@ class _MyHomePageState extends State<MyHomePage>
     setState(() {
       count = (count + increment > 4) ? 0 : count + increment;
     });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 }
