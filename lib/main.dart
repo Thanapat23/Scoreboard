@@ -51,7 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
     }
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ScoreBoard DEMO"),
+        centerTitle: true,
+        title: container,
       ),
       body: container,
       endDrawer: Drawer(
