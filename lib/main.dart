@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:scoreboard/Components/IntroSplashScreen.dart';
+import 'package:scoreboard/Components/MenuSports.dart';
+import 'package:scoreboard/Components/MenuSportsList.dart';
 
 void main() {
   runApp(const MyApp());
@@ -101,6 +103,23 @@ class _MyHomePageState extends State<MyHomePage>
     return Scaffold(
       appBar: AppBar(
         title: const Text("ScoreBoard DEMO"),
+      ),
+      body: Container(
+        child: Center(
+          child: Text("Home Page"),
+        ),
+      ),
+      endDrawer: Drawer(
+        child: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: [
+                MenuSports(),
+                MenuSportsList(),
+              ],
+            ),
+          ),
+        ),
       ),
     );
 
