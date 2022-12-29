@@ -33,7 +33,7 @@ class _MenuSportsState extends State<MenuSports> {
             style: TextStyle(color: Colors.white, fontSize: 18),
           ),
           Text(
-            "List Sports",
+            "Sports List",
             style: TextStyle(color: Colors.white, fontSize: 14),
           ),
         ],
