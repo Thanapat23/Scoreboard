@@ -10,7 +10,7 @@ class _FootballState extends State<Football> {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text("Football"),
+        child: Text("ScoreBoard Football"),
       ),
     );
   }
