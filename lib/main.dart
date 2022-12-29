@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:scoreboard/Components/IntroSplashScreen.dart';
-import 'package:scoreboard/Components/MenuItems.dart';
 import 'package:scoreboard/Components/MenuSports.dart';
 // import 'package:scoreboard/Components/MenuSportsList.dart';
 // import 'package:scoreboard/Components/MenuItems.dart';
