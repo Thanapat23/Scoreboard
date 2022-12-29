@@ -5,10 +5,10 @@ import 'package:scoreboard/Components/MenuSports.dart';
 // import 'package:scoreboard/Components/MenuSportsList.dart';
 // import 'package:scoreboard/Components/MenuItems.dart';
 
-// import 'Components/Home.dart';
-// import 'Components/Basketball.dart';
-// import 'Components/Volleyball.dart';
-// import 'Components/Football.dart';
+import 'Components/Home.dart';
+import 'Components/Basketball.dart';
+import 'Components/Volleyball.dart';
+import 'Components/Football.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,15 +39,21 @@ class _MyHomePageState extends State<MyHomePage> {
   var currentPage = DrawerSections.home;
   @override
   Widget build(BuildContext context) {
+    var container;
+    if (currentPage == DrawerSections.home) {
+      container = Home();
+    } else if (currentPage == DrawerSections.basketball) {
+      container = Basketball();
+    } else if (currentPage == DrawerSections.volleyball) {
+      container = Volleyball();
+    } else if (currentPage == DrawerSections.football) {
+      container = Football();
+    }
     return Scaffold(
       appBar: AppBar(
         title: const Text("ScoreBoard DEMO"),
       ),
-      body: Container(
-        child: Center(
-          child: Text("Home Page"),
-        ),
-      ),
+      body: container,
       endDrawer: Drawer(
         child: SingleChildScrollView(
           child: Container(
